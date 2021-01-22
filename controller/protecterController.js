@@ -8,11 +8,11 @@ const User = require('./../models/userModel');
 exports.protect = catchAsync(async (req,res,next) => {
 
     let token;
-    console.log('req.cookie: ',req.cookies);
+    // console.log('req.cookie: ',req.cookies);
 
     // 1) Get the Token and check if it exists
-    if( req.cookie.jwt ) {
-        token = req.cookie.jwt;
+    if( req.cookies.jwt ) {
+        token = req.cookies.jwt;
     }
 
     if(!token) return next(new AppError('You are not logged in! Please Log in to get the access.',401));
