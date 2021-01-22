@@ -1,6 +1,5 @@
 const User = require('./../models/userModel');
 const catchAsync = require('./../utils/catchAsync');
-const appError = require('./../utils/appError');
 const AppError = require('./../utils/appError');
 
 exports.getMyLogs = catchAsync(async (req,res,next) => {
