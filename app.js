@@ -1,3 +1,4 @@
+const compression = require('compression');
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -15,6 +16,7 @@ app.use(cors());
 if(process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'));
 }
+app.use(compression());
 
 // Common Middlewares
 app.use(cookie_parser());

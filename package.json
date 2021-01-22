@@ -4,13 +4,17 @@
   "description": "Inkers Assignment",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js",
+    "debug": "ndb server.js"
   },
   "author": "Adarsh Gupta",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.828.0",
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
     "cookie-session": "^1.4.0",
     "cors": "^2.8.5",
@@ -23,5 +27,8 @@
     "multer-s3": "^2.9.0",
     "uuid": "^8.3.2",
     "validator": "^13.5.2"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }
